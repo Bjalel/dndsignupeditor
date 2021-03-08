@@ -1,16 +1,22 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { BrowserModule } from '@angular/platform-browser';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
+import { DndModule } from 'ngx-drag-drop';
+
+   
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+
+  imports:      [ BrowserModule, FormsModule, ReactiveFormsModule ,DndModule,RouterModule,RouterModule.forRoot([]),],
+
+  declarations: [ AppComponent ],
+
+  bootstrap:    [ AppComponent ]
+
 })
+
 export class AppModule { }
